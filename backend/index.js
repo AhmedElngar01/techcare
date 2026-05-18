@@ -36,6 +36,11 @@ app.use('/api/v1/admin/analytics', require('./src/routes/admin.analytics'));
 // Error handling
 app.use(errorHandler);
 
-app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
-});
+// Only listen if not running in a Vercel Serverless environment
+if (!process.env.VERCEL) {
+    app.listen(PORT, () => {
+        console.log(`Server running on port ${PORT}`);
+    });
+}
+
+module.exports = app;
