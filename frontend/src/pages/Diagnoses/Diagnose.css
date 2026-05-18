@@ -1,0 +1,88 @@
+.diagnose-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-8);
+}
+
+.diagnose-form-card, .diagnose-result-card {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-6);
+    box-shadow: var(--shadow-sm);
+}
+
+.checklist-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: var(--space-3);
+    margin-top: var(--space-2);
+}
+
+.checklist-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-size: var(--font-size-sm);
+    cursor: pointer;
+}
+
+.empty-result-state, .analyzing-state {
+    height: 100%;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.analyzing-icon {
+    color: var(--color-primary);
+    margin-bottom: var(--space-4);
+}
+
+.pulse-animation {
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.1); opacity: 0.7; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.bg-light {
+    background-color: var(--color-bg);
+}
+
+.rounded {
+    border-radius: var(--radius-md);
+}
+
+.p-4 {
+    padding: var(--space-4);
+}
+
+.w-fit {
+    width: fit-content;
+}
+
+.d-block {
+    display: block;
+}
+
+.uppercase {
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.opacity-50 {
+    opacity: 0.5;
+}
+
+@media (max-width: 900px) {
+    .diagnose-content {
+        grid-template-columns: 1fr;
+    }
+}

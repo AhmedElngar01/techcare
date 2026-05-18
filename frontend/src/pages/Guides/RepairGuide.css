@@ -1,0 +1,178 @@
+.guide-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: var(--space-8);
+}
+
+.guide-progress-info {
+    width: 300px;
+    text-align: right;
+}
+
+.guide-content {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: var(--space-8);
+}
+
+.guide-sidebar {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-4);
+    height: fit-content;
+}
+
+.guide-sidebar h3 {
+    margin-bottom: var(--space-4);
+    padding-bottom: var(--space-2);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.step-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+
+.step-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    padding: var(--space-2);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.step-item:hover {
+    background-color: var(--color-bg);
+}
+
+.step-item--active {
+    background-color: var(--color-primary-light);
+    color: var(--color-primary-dark);
+}
+
+.step-item--completed .step-item__title {
+    text-decoration: line-through;
+    color: var(--color-text-muted);
+}
+
+.step-item__indicator {
+    width: 24px;
+    height: 24px;
+    border-radius: var(--radius-full);
+    background-color: var(--color-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--font-size-xs);
+    font-weight: 600;
+}
+
+.step-item--completed .step-item__indicator {
+    background-color: var(--color-success-bg);
+    color: var(--color-success);
+}
+
+.step-item--active .step-item__indicator {
+    background-color: var(--color-primary);
+    color: #fff;
+}
+
+.active-step-card {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-8);
+    box-shadow: var(--shadow-sm);
+}
+
+.active-step-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: var(--space-6);
+}
+
+.time-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-1);
+    background-color: var(--color-bg);
+    padding: var(--space-1) var(--space-3);
+    border-radius: var(--radius-full);
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+}
+
+.tools-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+}
+
+.tool-chip {
+    background-color: var(--color-bg);
+    border: 1px solid var(--color-border);
+    padding: var(--space-1) var(--space-3);
+    border-radius: var(--radius-full);
+    font-size: var(--font-size-sm);
+}
+
+.instruction-text {
+    font-size: var(--font-size-lg);
+    line-height: 1.6;
+}
+
+.step-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: var(--space-6);
+    border-top: 1px solid var(--color-border);
+}
+
+.completion-card {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-12) var(--space-6);
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.completion-icon {
+    color: var(--color-success);
+    margin-bottom: var(--space-4);
+    display: flex;
+    justify-content: center;
+}
+
+.flex-align-center {
+    display: flex;
+    align-items: center;
+}
+
+.gap-2 {
+    gap: var(--space-2);
+}
+
+@media (max-width: 900px) {
+    .guide-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .guide-header {
+        flex-direction: column;
+        gap: var(--space-4);
+    }
+    
+    .guide-progress-info {
+        width: 100%;
+        text-align: left;
+    }
+}
