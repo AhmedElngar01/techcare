@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://via.placeholder.com/150x150/6B21A8/FF00FF?text=TechCare" alt="TechCare Logo" width="120" height="120" style="border-radius: 20px;">
+  
   <h1>🚀 TechCare AI Platform</h1>
   <p><b>Next-Generation AI-Powered Device Repair & Hardware Diagnostics</b></p>
   
